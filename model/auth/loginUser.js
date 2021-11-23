@@ -9,6 +9,9 @@ const loginUser = async (body) => {
     if (!user) {
       return null
     }
+    if (!user.verify) {
+      return 'Not verified'
+    }
     const hashedPassword = user.password
     const compareResult = bcrypt.compareSync(password, hashedPassword)
     if (!compareResult) {

@@ -44,10 +44,15 @@ const joiPatchSubscriptionUserSchema = Joi.object({
   subscription: Joi.string().valid(...subscriptions).required(),
 })
 
+const joiDoubleVerifySchema = Joi.object({
+  email: Joi.string().pattern(regex.emailRegex).required(),
+})
+
 module.exports = {
   joiPostPutContactSchema,
   joiPatchContactSchema,
   joiPatchStatusContactSchema,
   joiUserSchema,
-  joiPatchSubscriptionUserSchema
+  joiPatchSubscriptionUserSchema,
+  joiDoubleVerifySchema
 }

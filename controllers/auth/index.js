@@ -4,6 +4,8 @@ const authLogout = require('./authLogout')
 const authCurrent = require('./authCurrent')
 const authPatchSub = require('./authPatchSub')
 const authPatchAvatar = require('./authPatchAvatar')
+const authVerify = require('./authVerify')
+const authVerifyResend = require('./authVerifyResend')
 
 module.exports = {
   authRegister,
@@ -11,5 +13,7 @@ module.exports = {
   authLogout,
   authCurrent,
   authPatchSub,
-  authPatchAvatar
+  authPatchAvatar,
+  authVerify,
+  authVerifyResend
 }
