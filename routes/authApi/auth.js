@@ -17,6 +17,6 @@ router.patch('/current/avatars', authorize, upload.single('avatarURL'), controll
 
 router.get('/verify/:verifyToken', controllerWrapper(authVerify))
 
-router.patch('/verify', checkValidity(joiDoubleVerifySchema), controllerWrapper(authVerifyResend))
+router.post('/verify', checkValidity(joiDoubleVerifySchema), controllerWrapper(authVerifyResend))
 
 module.exports = router

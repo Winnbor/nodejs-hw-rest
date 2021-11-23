@@ -5,7 +5,7 @@ const { getCurrent } = require('./getCurrent')
 const { patchUserSub } = require('./patchUserSub')
 const { patchUserAvatar } = require('./patchUserAvatar')
 const { getVerified } = require('./getVerified')
-const { patchVerification } = require('./patchVerification')
+const { postVerification } = require('./postVerification')
 
 module.exports = {
   registerUser,
@@ -15,5 +15,5 @@ module.exports = {
   patchUserSub,
   patchUserAvatar,
   getVerified,
-  patchVerification
+  postVerification
 }

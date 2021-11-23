@@ -1,7 +1,7 @@
-const { patchVerification } = require('../../model/auth')
+const { postVerification } = require('../../model/auth')
 
 const authVerifyResend = async (req, res, next) => {
-  const data = await patchVerification(req.body)
+  const data = await postVerification(req.body)
   if (!data) {
     return res.status(404).json({
       status: 'error',

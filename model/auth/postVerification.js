@@ -1,7 +1,7 @@
 const User = require('../../schemas/User')
 const { sendMail } = require('../../helpers')
 
-const patchVerification = async(body) => {
+const postVerification = async(body) => {
   const { email } = body
 
   const user = await User.findOne({ email })
@@ -22,4 +22,4 @@ const patchVerification = async(body) => {
   return true
 }
 
-module.exports = { patchVerification }
+module.exports = { postVerification }
